@@ -13,8 +13,9 @@ button.addEventListener("click",
         
         // prendo il div container e lo svuoto ogni volta al click:
         container.innerHTML = "";
+
+        // per far scomparire il div al click del play:
         endGame.style.display= "none";
-        punteggio = [];
         
         // genero 16 numeri casuali servendomi della funzione arrayRandom:
         let newArray = arrayRandom(16, 1, 100);
