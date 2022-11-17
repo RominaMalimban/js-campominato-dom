@@ -2,6 +2,7 @@
 let button = document.querySelector("button");
 let main = document.querySelector("main");
 let container = document.querySelector(".container");
+let endGame = document.getElementById("end");
 
 // al click su bottone mi genero la griglia:
 button.addEventListener("click",
@@ -25,13 +26,14 @@ button.addEventListener("click",
             cella.innerHTML = i;
             
             // devo creare una funzione in cui al click se il numero fa parte dell'array si colora di rosso, altrimenti celeste:
-
             cella.addEventListener("click",
                 function(){
                     if(newArray.includes(i)){
-                        cella.classList.add("bomb")
+                        cella.classList.add("bomb");
+                        endGame.style.display= "block";
+                        endGame.innerHTML = `Mi dispiace hai perso!`
                     }else{
-                        cella.classList.add("clicked-box")
+                        cella.classList.add("clicked-box");
                     }
 
                 }
