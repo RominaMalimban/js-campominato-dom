@@ -9,8 +9,8 @@ button.addEventListener("click",
         
         // 1- prendo il div container e lo svuoto ogni volta al click:
         container.innerHTML = "";
-
-        // 2- mi servo del ciclo per generarmi 64 boxes tramite la funzione:
+        
+        // 2- mi servo del ciclo per generarmi 100 boxes tramite la funzione:
         for (let i = 1; i <= 100; i++){
 
             let cella = newElement();
@@ -20,14 +20,18 @@ button.addEventListener("click",
             cella.innerHTML = i;
 
             // devo creare una funzione in cui al click sulla cella, questa si colora:
-            cella.addEventListener("click",
-                function(){
-                    cella.classList.add("clicked-box");
-                    console.log(i);
-                }
-            );
+            // cella.addEventListener("click",
+            //     function(){
+            //         cella.classList.add("clicked-box");
+            //         console.log(i);
+            //     }
+            // );
+
+           
         }
 
+        let newArray = arrayRandom(16, 1, 100);
+        console.log(newArray)
     }
 );
 
