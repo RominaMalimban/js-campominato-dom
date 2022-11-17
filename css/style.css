@@ -1,0 +1,70 @@
+/* regole generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* regole header */
+header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo h1{
+    margin-left: 10px;
+}
+
+button{
+    padding:  2px 20px;
+}
+
+/* regole main */
+main{
+    background-color: #7fffd4;
+    padding: 50px 0;
+    margin-bottom: 40px;
+}
+
+.container{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 10%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.clicked-box{
+    background-color:  #7fffd4;
+}
+
+/* regole footer */
+footer{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
