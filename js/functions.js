@@ -28,8 +28,8 @@ function arrayRandom(quantita, numMinimo, numMassimo){
         if(!myArray.includes(newNum)){
             myArray.push(newNum);
         }
-
-        // infine ritorno l'array:
-        return myArray;
     }
+    
+    // infine ritorno l'array:
+    return myArray;
 }

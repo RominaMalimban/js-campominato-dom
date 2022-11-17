@@ -7,10 +7,15 @@ let container = document.querySelector(".container");
 button.addEventListener("click",
     function(){
         
-        // 1- prendo il div container e lo svuoto ogni volta al click:
+        // prendo il div container e lo svuoto ogni volta al click:
         container.innerHTML = "";
         
-        // 2- mi servo del ciclo per generarmi 100 boxes tramite la funzione:
+        // genero 16 numeri casuali servendomi della funzione arrayRandom:
+        let newArray = arrayRandom(16, 1, 100);
+        console.log(newArray);
+        // console.log(newArray[i]);
+
+        // mi servo del ciclo per generarmi 100 boxes tramite la funzione newElement:
         for (let i = 1; i <= 100; i++){
 
             let cella = newElement();
@@ -18,20 +23,23 @@ button.addEventListener("click",
             // aggancio la variabile cella al suo contenitore e ci inserisco il numero:
             container.append(cella);
             cella.innerHTML = i;
+            
+            // devo creare una funzione in cui al click se il numero fa parte dell'array si colora di rosso, altrimenti celeste:
 
-            // devo creare una funzione in cui al click sulla cella, questa si colora:
-            // cella.addEventListener("click",
-            //     function(){
-            //         cella.classList.add("clicked-box");
-            //         console.log(i);
-            //     }
-            // );
+            cella.addEventListener("click",
+                function(){
+                    if(newArray.includes(i)){
+                        cella.classList.add("bomb")
+                    }else{
+                        cella.classList.add("clicked-box")
+                    }
+
+                }
+            );
 
            
         }
-
-        let newArray = arrayRandom(16, 1, 100);
-        console.log(newArray)
+        
     }
 );
 
